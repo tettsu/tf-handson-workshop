@@ -14,5 +14,9 @@ resource "aws_instance" "hello-tf-instance" {
   count = var.hello_tf_instance_count
   instance_type = var.hello_tf_instance_type
   subnet_id = "subnet-08938cd362751ea93"
+  tags = {
+    owner = "Kabu"
+    ttl   = "100"
+  }
 }
 
